@@ -26,7 +26,7 @@
 
         <div class="text-right hidden sm:block">
             <div class="text-sm font-semibold leading-tight">
-                {{ auth()->user()->nama ?? 'Pengguna' }}
+                {{ auth()->user()->name ?? 'Pengguna' }}
             </div>
             <div class="text-xs text-base-content/50 leading-tight">
                 {{ auth()->user()->role ?? 'Admin Sistem' }}
