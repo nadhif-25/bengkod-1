@@ -85,6 +85,12 @@
                 <i class="fas fa-house-medical w-4 text-center"></i>
                 Pendaftaran Periksa
             </a>
+
+            <a href="{{ route('jadwal-periksa.index') }}"
+                class="{{ $baseLink }} {{ request()->routeIs('jadwal-periksa.*') ? $active : $inactive }}">
+                <i class="fas fa-stethoscope w-4 text-center"></i>
+                Jadwal Periksa
+            </a>
         </div>
         @endif
 
@@ -132,8 +138,15 @@
             <i class="fas fa-notes-medical w-4 text-center"></i>
             Periksa Pasien
         </a>
-        @endif
+
+        <a href="{{ route('riwayat-pasien.index') }}"
+            class="{{ $baseLink }} {{ request()->routeIs('riwayat-pasien.*') ? $active : $inactive }}">
+            <i class="fas fa-clock-rotate-left w-4 text-center"></i>
+            Riwayat Pasien
+        </a>
+       
     </div>
+     @endif
 
 
     {{-- ================= LOGOUT ================= --}}
