@@ -97,11 +97,3 @@ class DokterController extends Controller
             ->with('type', 'success');
     }
 }
-
-Route::middleware(['auth', 'role:admin'])->prefix('admin')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    })->name('admin.dashboard');
-    Route::resource('polis', AdminPoliController::class);
-    Route::resource('dokter', DokterController::class);
-});
